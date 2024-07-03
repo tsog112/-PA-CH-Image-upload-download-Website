@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  padding: 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+header .navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+.navbar .menu-links li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.navbar .menu-links .language-item a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.navbar .menu-links .language-item span {
+  font-size: 1.3rem;
+}
+.navbar .menu-links li a:hover {
+  color: #4158d0;
+}
+.navbar .menu-links .join-btn a {
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+.navbar .menu-links .join-btn a:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #4158d0;
+}
+
+.navbar .text{
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  
+}
+
+
+
+.container{
+  width: 850px;
+  padding: 30px 35px 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.container.disable .editor-panel,
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img{
+  opacity: 0.5;
+  pointer-events: none;
+}
+.container h2{
+  margin-top: -8px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.container .wrapper{
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+
+@media screen and (max-width: 760px) {
+  .container{
+    padding: 25px;
+  }
+  .container .wrapper{
+    flex-wrap: wrap-reverse;
+  }
+  .wrapper .editor-panel{
+    width: 100%;
+  }
+  .wrapper .preview-img{
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .controls button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .controls .row{
+    width: 100%;
+  }
+  .controls .row .save-img{
+    margin-left: 0px;
+  }
+}
+
+.actions button, .actions a {
+    color: #fff; 
+  border-color: transparent; 
+  background: #4158d0; 
+  font-weight: 500; 
+  text-decoration: none; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px; 
+  margin: 0 5px; 
+  border: 2px solid transparent; 
+  padding: 8px 15px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: 0.2s ease; 
+  }
+  
+  .actions button:hover, .actions a:hover, .actions a.download-link:hover {
+    color: black;
+    border: 1px solid black;
+    background: #fff;
+  }
+  
+  /* Since 'Edit Title' is a button, not a link, you may need to override browser defaults */
+  button {
+    color: #fff;
+    border-color: transparent;
+    background: #4158d0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .actions a.download-link {
+    text-align: center;
+    width: auto;
+    background: #4158d0; 
+  }
+
+  .upload-date {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px; 
+    font-weight: 500; 
+  }
+  
+  .upload-date span {
+    color: #4158d0; 
+    font-weight: 600; 
+  }
+  
+
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align the items to the top */
+    gap: 20px; /* Space between image and text container */
+  }
+  
+  .image-container {
+    flex-basis: 50%; /* Adjust the width as needed */
+    flex-shrink: 0; /* Prevent the image container from shrinking */
+  }
+  
+  .image-container img {
+    width: 100%; /* Make the image take full width of the container */
+    height: 270px; /* Maintain the aspect ratio of the image */
+    border-radius: 10px; /* Optional: if you want rounded corners for the image */
+  }
+  
+  .text-container {
+    flex-grow: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column; /* Stack the title and memo vertically */
+    justify-content: center; /* Center the content vertically */
+  }
+  
+  .image-title {
+    font-size: 24px; /* Adjust title size as needed */
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 4px 4px 4px 4px;
+  }
+  
+  
+  .image-memo {
+    font-size: 18px; /* Adjust memo text size as needed */
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 4px 4px 4px 4px;
+  }
+  

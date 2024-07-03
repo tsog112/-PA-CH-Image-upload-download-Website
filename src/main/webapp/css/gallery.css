@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+.grid-item {
+	border: 1px solid black;
+  break-inside: avoid;
+  margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+}
+
+.actions {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  padding: 5px;
+  text-align: center;
+}
+
+.grid-item:hover .actions {
+  display: block; /* Actions are shown on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+/* header */
+body {
+  padding-top: 100px; 
+}
+
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+header .navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+.navbar .menu-links li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.navbar .menu-links .language-item a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.navbar .menu-links .language-item span {
+  font-size: 1.3rem;
+}
+.navbar .menu-links li a:hover {
+  color: #4158d0;
+}
+.navbar .menu-links .join-btn a {
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+.navbar .menu-links .join-btn a:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #4158d0;
+}
+
+.navbar .text{
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  
+}
+
+
+/* button */
+
+.actions button, .actions a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+  display: inline-flex; /* Align items in a row */
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text if you add icons */
+  margin: 0 5px; /* Space between buttons */
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background: transparent; /* Initially, buttons have no background */
+  cursor: pointer; /* To indicate the elements are clickable */
+}
+
+.actions button:hover, .actions a:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #4158d0; /* Change background on hover */
+}
+
+/* Since 'Edit Title' is a button, not a link, you may need to override browser defaults */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Add a class to your 'Download' anchor tag to distinguish from other anchor tags */
+.actions a.download-link {
+  text-align: center;
+  width: auto; /* Adjust width as necessary */
+  background: linear-gradient(-135deg, #c850c0, #4158d0); /* Gradient background */
+}
+
+
+/* search */
+
+.search-form {
+  margin-left: 5px;
+  height: 48px;
+  display: flex;
+  max-width: 38%;
+  margin-top: 1%;
+  border: 1px solid black;
+  border-radius: 0 6px 6px 0;
+}
+.search-form input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+}
+.search-form button {
+  height: 100%;
+  width: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #4158d0;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  transition: background 0.2s ease;
+}
+.search-form button:hover {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+/* ... existing CSS ... */
+
+.add-category {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#categories-container {
+  margin-top: 20px;
+}
+
+/* Style for new category elements */
+.category-photos {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+

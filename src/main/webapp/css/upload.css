@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+.container{
+  height: 350px;
+  width: 430px;
+  position: relative;
+}
+.container .wrapper{
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrapper.active{
+  border: none;
+}
+.wrapper .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper .icon{
+  font-size: 100px;
+  color: #9658fe;
+}
+.wrapper .text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: black;
+  cursor: pointer;
+  display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+  display: block;
+}
+.wrapper #cancel-btn i:hover{
+  color: white;
+}
+.wrapper .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.wrapper.active:hover .file-name{
+  display: block;
+}
+.container #custom-btn{
+  margin-top: 20px;
+  width: 50%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+#upload-btn {
+  margin-top: 20px;
+  width: 50%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  text-transform: uppercase;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+header .navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+.navbar .menu-links li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.navbar .menu-links .language-item a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.navbar .menu-links .language-item span {
+  font-size: 1.3rem;
+}
+.navbar .menu-links li a:hover {
+  color: #4158d0;
+}
+.navbar .menu-links .join-btn a {
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+.navbar .menu-links .join-btn a:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #4158d0;
+}
+
+.navbar .text{
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  
+}
+
+
+
+/* Style for the Title Input */
+.title-input-container {
+  margin-top: 20px;
+}
+
+#title-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c2cdda;
+  font-size: 16px;
+}
+
+/* Style for Buttons Row */
+.buttons-row {
+  display: flex;
+  justify-content: space-between; /* Space out buttons evenly */
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Adjusting the width of the buttons to fit in the row */
+#custom-btn, #upload-btn {
+  width: 48%; /* Adjust as necessary to fit side by side */
+  /* Other button styles remain the same */
+}
+
+
